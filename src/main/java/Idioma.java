@@ -22,10 +22,10 @@ public class Idioma {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
+// commentario
     public String toString(){
         return String.format("Sigla: %d --- Descricao: %d%n",this.sigla,this.descricao);
     }
-    
+
 
 }
