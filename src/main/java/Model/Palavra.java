@@ -28,6 +28,4 @@ public class Palavra {
     public String toString(){
         return String.format("Model.Palavra: %s --- Identificador: %d%n",this.palavra,this.identificador);
     }
-    public
-
 }

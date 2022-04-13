@@ -2,6 +2,7 @@ package baseDados.demo_oracle_jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class TesteDBConnectionHandler {
 
@@ -87,10 +88,39 @@ public class TesteDBConnectionHandler {
 //            dbConnHandler.insert(insertData3);
 //            dbConnHandler.insert(insertData4);
 
+            Scanner ler = new Scanner(System.in);
+            System.out.println("introduza uma palavra em Portugues!");
+            String utilizador=ler.nextLine();
+            String valorid= "SELECT idPalavra FROM Portugues WHERE descricao= '"+utilizador+"'";
 
 
 
+            ResultSet rs1=dbConnHandler.select(valorid);
+            String idPalavras="";
+            while(rs1.next()){
+            idPalavras=rs1.getString("idPalavra");}
 
+
+            String lerData= "SELECT descricao FROM Ingles WHERE idPalavra='"+idPalavras+"'";
+            ResultSet rs=dbConnHandler.select(lerData);
+
+            while(rs.next()){
+                String descricao=rs.getString("descricao");
+                System.out.println(descricao+","+"\n");
+            }
+
+//            String insertData1="INSERT INTO Ingles "
+//            + "VALUES ('PT', 'id_1', 'Hello')";
+//            String insertData2="INSERT INTO Ingles "
+//            + "VALUES ('PT', 'id_2', 'Today')";
+//            String insertData3="INSERT INTO Ingles "
+//            + "VALUES ('PT', 'id_3', 'Tomorrow')";
+//            String insertData4="INSERT INTO Ingles "
+//            + "VALUES ('PT', 'id_4', 'Holiday')";
+//            dbConnHandler.insert(insertData1);
+//            dbConnHandler.insert(insertData2);
+//            dbConnHandler.insert(insertData3);
+//            dbConnHandler.insert(insertData4);
 
 
 
@@ -110,8 +140,8 @@ public class TesteDBConnectionHandler {
            String insertData3 =  "INSERT INTO Employee(Name, Salary, Location)" +
                     " VALUES('Miguel', 23000, 'Porto')";*/
 
-           String lerData= "SELECT * FROM Model.Portugues";
-            ResultSet rs=dbConnHandler.select(lerData);
+          // String lerData= "SELECT * FROM Portugues";
+            //ResultSet rs=dbConnHandler.select(lerData);
 
 
 //            while (rs.next()) {
@@ -120,12 +150,11 @@ public class TesteDBConnectionHandler {
 //                String location= rs.getString("location");
 //                System.out.println(Name + " , " + Salary +" , " + location+"\n" );
 //            }
-            while(rs.next()){
-                String sigla=rs.getString("sigla");
-                String idPalavra=rs.getString("idPalavra");
-                String descricao=rs.getString("descricao");
-                System.out.println(sigla+","+idPalavra+","+descricao+","+"\n");
-            }
+
+
+
+
+
 
            // ResultSetMetaData rsMetaData = rs.getMetaData();
          //   System.out.println("List of column names in the current table: ");

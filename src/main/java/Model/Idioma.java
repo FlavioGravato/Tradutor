@@ -45,5 +45,4 @@ public class Idioma {
         palavras.add(novaPalavra);
     }
 
-
 }
