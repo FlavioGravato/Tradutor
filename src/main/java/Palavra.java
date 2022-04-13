@@ -1,4 +1,4 @@
-public class Palavra {
+    public class Palavra {
     private String palavra;
     private int identificador;
 
@@ -26,5 +26,6 @@ public class Palavra {
     public String toString(){
         return String.format("Palavra: %s --- Identificador: %d%n",this.palavra,this.identificador);
     }
+    public
 
 }
