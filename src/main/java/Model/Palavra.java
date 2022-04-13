@@ -1,4 +1,6 @@
-    public class Palavra {
+package Model;
+
+public class Palavra {
     private String palavra;
     private int identificador;
 
@@ -24,7 +26,7 @@
     }
 
     public String toString(){
-        return String.format("Palavra: %s --- Identificador: %d%n",this.palavra,this.identificador);
+        return String.format("Model.Palavra: %s --- Identificador: %d%n",this.palavra,this.identificador);
     }
     public
 

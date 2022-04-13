@@ -44,24 +44,24 @@ public class TesteDBConnectionHandler {
             +"VALUES ('FR', 'Francês')";
 
             String insertData4="INSERT INTO Linguas "
-            +"VALUES ('ESP', 'Espanhol')";*/
+            +"VALUES ('ESP', 'Model.Espanhol')";*/
 
            // dbConnHandler.insert(insertData1);
 //            dbConnHandler.insert(insertData2);
 //            dbConnHandler.insert(insertData3);
 //            dbConnHandler.insert(insertData4);
 
-//            String createTable =" CREATE TABLE Portugues ("
+//            String createTable =" CREATE TABLE Model.Portugues ("
 //                    +"sigla VARCHAR (50) not null, "
 //                    +"idPalavra VARCHAR (50) not null, "
 //                    +"descricao VARCHAR (50) not null, "
 //                    +"constraint pk_idPalavra primary key (idPalavra) enable )" ;
 //            boolean bool = dbConnHandler.create(createTable);
 //            System.out.println(bool);
-          //  String alter ="ALTER TABLE Portugues ADD CONSTRAINT fkLinguaSigla FOREIGN KEY (sigla) REFERENCES Linguas (sigla)";
+          //  String alter ="ALTER TABLE Model.Portugues ADD CONSTRAINT fkLinguaSigla FOREIGN KEY (sigla) REFERENCES Linguas (sigla)";
           //  dbConnHandler.create(alter);
 
-           /* String createTable = "CREATE TABLE Ingles ("
+           /* String createTable = "CREATE TABLE Model.Ingles ("
                     +"sigla VARCHAR (50) not null,"
                     +"idPalavra VARCHAR (50) not null, "
                     +"descricao VARCHAR (50) not null, "
@@ -70,16 +70,16 @@ public class TesteDBConnectionHandler {
             System.out.println(bool);*/
 
 
-            //String alter= "ALTER TABLE Ingles ADD CONSTRAINT fkLinguaSiglaIng FOREIGN KEY (sigla) REFERENCES Linguas (sigla)";
+            //String alter= "ALTER TABLE Model.Ingles ADD CONSTRAINT fkLinguaSiglaIng FOREIGN KEY (sigla) REFERENCES Linguas (sigla)";
             //dbConnHandler.create(alter);
 
-//            String insertData1="INSERT INTO Portugues "
+//            String insertData1="INSERT INTO Model.Portugues "
 //            +"VALUES ('PT', 'id_1', 'Olá')";
-//            String insertData2= "INSERT INTO Portugues "
+//            String insertData2= "INSERT INTO Model.Portugues "
 //            +"VALUES ('PT', 'id_2', 'Hoje')";
-//            String insertData3="INSERT INTO Portugues "
+//            String insertData3="INSERT INTO Model.Portugues "
 //            +"VALUES ('PT', 'id_3', 'Amanhã')";
-//            String insertData4= "INSERT INTO Portugues "
+//            String insertData4= "INSERT INTO Model.Portugues "
 //            +"VALUES ('PT', 'id_4', 'Férias')";
 
 //            dbConnHandler.insert(insertData1);
@@ -110,7 +110,7 @@ public class TesteDBConnectionHandler {
            String insertData3 =  "INSERT INTO Employee(Name, Salary, Location)" +
                     " VALUES('Miguel', 23000, 'Porto')";*/
 
-           String lerData= "SELECT * FROM Portugues";
+           String lerData= "SELECT * FROM Model.Portugues";
             ResultSet rs=dbConnHandler.select(lerData);
 
 
